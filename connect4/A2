@@ -1,0 +1,37 @@
+column = 7
+
+row = 6
+
+size = 80
+
+off_x = 50
+
+off_y = 50
+
+board = []
+
+current_player = 1
+
+gameover = False
+
+winner = 0
+
+def setup():
+
+    size(700, 600)
+
+    init_board()
+
+def init_board():
+
+    global board
+
+    board = create_2d_array(column, row)
+
+def create_1d_array(length):
+
+    if length <= 0:
+
+        return []
+
+    return [0] + create_1d_array(length - 1)
